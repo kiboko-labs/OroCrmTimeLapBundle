@@ -125,7 +125,7 @@
                         {% endif %}
                         {% for task in timesheet.listTasks %}
                             <tr>
-                                <td><a href="{{ path('orocrm_task_view', {'id':task.id}) }}">{{ task.getSubject }}</a></td>
+                                <td><a href="{{ path('oro_task_view', {'id':task.id}) }}">{{ task.getSubject }}</a></td>
                                 <td>{{ task.getTotalTimeSpent }}</td>
                                 {% for day in month %}
                                     <td class="{{ timelap_is_weekend(day) ? 'weekend' : 'work' }} fc-day fc-widget-content fc-sun fc-past">

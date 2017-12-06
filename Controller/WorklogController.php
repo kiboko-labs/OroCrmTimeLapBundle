@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 use RA\OroCrmTimeLapBundle\Form\WorklogInput;
 use RA\OroCrmTimeLapBundle\Form\WorklogType;
@@ -105,7 +105,7 @@ class WorklogController extends Controller
 
                 return $this->get('oro_ui.router')->redirectAfterSave(
                     ['route' => 'timelap_worklog_create', 'parameters' => ['taskId' => $input->getTaskId()]],
-                    ['route' => 'orocrm_task_view', 'parameters' => ['id' => $input->getTaskId()]]
+                    ['route' => 'oro_task_view', 'parameters' => ['id' => $input->getTaskId()]]
                 );
             }
         }
@@ -136,7 +136,7 @@ class WorklogController extends Controller
             'success',
             $this->get('translator')->trans('timelap.worklog.controller.deleted.message')
         );
-        return $this->redirect($this->generateUrl('orocrm_task_view', ['id' => $taskId]));
+        return $this->redirect($this->generateUrl('oro_task_view', ['id' => $taskId]));
     }
 
     /**

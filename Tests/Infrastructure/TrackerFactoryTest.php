@@ -3,7 +3,7 @@
 namespace RA\OroCrmTimeLapBundle\Tests\Infrastructure;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 use RA\OroCrmTimeLapBundle\Infrastructure\TrackerFactory;
 

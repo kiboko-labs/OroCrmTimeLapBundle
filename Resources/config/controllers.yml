@@ -1,0 +1,5 @@
+services:
+  timelap.controller.sidebar_widget:
+    class: RA\OroCrmTimeLapBundle\Controller\SidebarWidgetController
+    arguments:
+      - '@timelap.orocrmtask.repository'

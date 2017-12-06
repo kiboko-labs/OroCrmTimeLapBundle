@@ -9,11 +9,10 @@ placeholders:
             task_timelap_section: ~
 
 items:
-
     log_work_button:
         template: RAOroCrmTimeLapBundle::logWorkButton.html.twig
-        applicable: @oro_ui.placeholder.filter->isInstanceOf($entity$, %orocrm_task.entity.class%)
+        applicable: @oro_ui.placeholder.filter->isInstanceOf($entity$, %oro_task.entity.class%)
 
     task_timelap_section:
         template: RAOroCrmTimeLapBundle:Task:timeTrackingSection.html.twig
-        applicable: @oro_ui.placeholder.filter->isInstanceOf($entity$, %orocrm_task.entity.class%)
+        applicable: @oro_ui.placeholder.filter->isInstanceOf($entity$, %oro_task.entity.class%)

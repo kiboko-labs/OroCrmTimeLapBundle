@@ -3,7 +3,7 @@
 namespace RA\OroCrmTimeLapBundle\Tests\Model;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 use RA\OroCrmTimeLapBundle\Model\TimeSpent;
 use RA\OroCrmTimeLapBundle\Model\Worklog;

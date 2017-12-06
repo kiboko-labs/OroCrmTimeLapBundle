@@ -53,8 +53,8 @@ define(['jquery', 'underscore', 'backbone', 'routing', 'oroui/js/mediator', 'oro
 
             SetupView: Backbone.View.extend({
                 template: _.template(
-                    '<h3><%= _.__("orocrm.task.assigned_tasks_widget.settings") %></h3>' +
-                    '<label for="perPage"><%= _.__("orocrm.task.assigned_tasks_widget.number_of_tasks") %></label>' +
+                    '<h3><%= _.__("oro.task.assigned_tasks_widget.settings") %></h3>' +
+                    '<label for="perPage"><%= _.__("oro.task.assigned_tasks_widget.number_of_tasks") %></label>' +
                     '<input type="text" name="perPage" value="<%= settings.perPage %>"/>'
                 ),
 

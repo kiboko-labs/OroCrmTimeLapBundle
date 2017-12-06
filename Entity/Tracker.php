@@ -22,15 +22,15 @@ class Tracker extends \RA\OroCrmTimeLapBundle\Model\Tracker
     /**
      * @var \Oro\Bundle\UserBundle\Entity\User
      *
-     * @ORM\ManyToOne(targetEntity="\Oro\Bundle\UserBundle\Entity\User")
+     * @ORM\ManyToOne(targetEntity="Oro\Bundle\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $user;
 
     /**
-     * @var \OroCRM\Bundle\TaskBundle\Entity\Task
+     * @var \Oro\Bundle\TaskBundle\Entity\Task
      *
-     * @ORM\ManyToOne(targetEntity="\OroCRM\Bundle\TaskBundle\Entity\Task")
+     * @ORM\ManyToOne(targetEntity="Oro\Bundle\TaskBundle\Entity\Task")
      * @ORM\JoinColumn(name="task_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $task;

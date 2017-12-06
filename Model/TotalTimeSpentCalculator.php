@@ -2,7 +2,7 @@
 
 namespace RA\OroCrmTimeLapBundle\Model;
 
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 class TotalTimeSpentCalculator
 {

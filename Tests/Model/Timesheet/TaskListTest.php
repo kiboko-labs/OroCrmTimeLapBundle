@@ -5,7 +5,7 @@ namespace RA\OroCrmTimeLapBundle\Tests\Model\Timesheet;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task as TaskEntity;
+use Oro\Bundle\TaskBundle\Entity\Task as TaskEntity;
 
 use RA\OroCrmTimeLapBundle\Model\Period;
 use RA\OroCrmTimeLapBundle\Model\Timesheet\TaskList;

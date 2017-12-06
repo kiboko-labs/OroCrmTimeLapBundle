@@ -1,0 +1,92 @@
+services:
+    timelap.twig.extension:
+        class: RA\OroCrmTimeLapBundle\Twig\TimeTrackingExtension
+        arguments:
+          - '@timelap.total_timespent.calculator'
+          - '@timelap.worklog.repository'
+          - '@timelap.tracker.repository'
+          - '@router'
+          - '@oro_attachment.manager'
+          - '@security.context'
+        tags:
+            - { name: twig.extension }
+
+    timelap.twig.calendar.extension:
+        class: RA\OroCrmTimeLapBundle\Twig\CalendarExtension
+        tags:
+            - { name: twig.extension }
+
+    timelap.calendar.factory:
+        class: RA\OroCrmTimeLapBundle\Calendar\Factory
+        arguments:
+          - '@oro_locale.settings'
+
+    timelap.calendar.service:
+        class: RA\OroCrmTimeLapBundle\Calendar\Calendar
+        arguments:
+          - '@timelap.calendar.factory'
+
+    timelap.worklog.repository:
+        class: RA\OroCrmTimeLapBundle\Infrastructure\Persistence\DoctrineWorklogRepository
+        factory_method: getRepository
+        factory_service: doctrine.orm.entity_manager
+        arguments:
+          - RA\OroCrmTimeLapBundle\Entity\Worklog
+
+    timelap.tracker.repository:
+        class: RA\OroCrmTimeLapBundle\Infrastructure\Persistence\DoctrineTrackerRepository
+        factory_method: getRepository
+        factory_service: doctrine.orm.entity_manager
+        arguments:
+          - RA\OroCrmTimeLapBundle\Entity\Tracker
+
+    timelap.orocrmtask.repository:
+        class: Oro\Bundle\TaskBundle\Entity\Repository\TaskRepository
+        factory_method: getRepository
+        factory_service: doctrine.orm.entity_manager
+        arguments:
+          - Oro\Bundle\TaskBundle\Entity\Task
+
+    timelap.worklog.factory:
+        class: RA\OroCrmTimeLapBundle\Infrastructure\WorklogFactory
+
+    timelap.tracker.factory:
+        class: RA\OroCrmTimeLapBundle\Infrastructure\TrackerFactory
+
+    timelap.time_spent.factory:
+        class: RA\OroCrmTimeLapBundle\Model\TimeSpentFactory
+
+    timelap.total_timespent.calculator:
+        class: RA\OroCrmTimeLapBundle\Model\TotalTimeSpentCalculator
+        arguments:
+          - '@timelap.worklog.repository'
+
+    timelap.period.factory:
+        class: RA\OroCrmTimeLapBundle\Model\PeriodFactory
+        arguments:
+          - '@oro_locale.settings'
+
+    timelap.worklog.service:
+        class: RA\OroCrmTimeLapBundle\Services\Impl\WorklogServiceImpl
+        arguments:
+          - '@timelap.worklog.repository'
+          - '@timelap.worklog.factory'
+          - '@timelap.time_spent.factory'
+          - '@timelap.orocrmtask.repository'
+          - '@security.context'
+
+    timelap.tracker.service:
+        class: RA\OroCrmTimeLapBundle\Services\Impl\TrackerServiceImpl
+        arguments:
+          - '@timelap.worklog.repository'
+          - '@timelap.worklog.factory'
+          - '@timelap.time_spent.factory'
+          - '@timelap.tracker.repository'
+          - '@timelap.tracker.factory'
+
+    timelap.timesheet.service:
+        class: RA\OroCrmTimeLapBundle\Services\Impl\TimeSheetServiceImpl
+        arguments:
+          - '@timelap.worklog.repository'
+          - '@timelap.period.factory'
+          - '@oro_locale.settings'

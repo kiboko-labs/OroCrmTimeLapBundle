@@ -3,7 +3,7 @@
 namespace RA\OroCrmTimeLapBundle\Services\Impl;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 use RA\OroCrmTimeLapBundle\Services\WorklogService;
 use RA\OroCrmTimeLapBundle\Model\Worklog;

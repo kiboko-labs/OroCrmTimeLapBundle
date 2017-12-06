@@ -3,7 +3,7 @@
 namespace RA\OroCrmTimeLapBundle\Model;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 class Worklog
 {
@@ -28,7 +28,7 @@ class Worklog
     protected $description;
 
     /**
-     * @var \OroCRM\Bundle\TaskBundle\Entity\Task
+     * @var \Oro\Bundle\TaskBundle\Entity\Task
      */
     protected $task;
 
@@ -104,7 +104,7 @@ class Worklog
     }
 
     /**
-     * @return \OroCRM\Bundle\TaskBundle\Entity\Task
+     * @return \Oro\Bundle\TaskBundle\Entity\Task
      */
     public function getTask()
     {

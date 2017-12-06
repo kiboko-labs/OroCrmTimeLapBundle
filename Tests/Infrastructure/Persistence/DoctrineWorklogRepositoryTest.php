@@ -10,7 +10,7 @@ use Doctrine\ORM\Persisters\BasicEntityPersister;
 use Doctrine\ORM\UnitOfWork;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 use RA\OroCrmTimeLapBundle\Infrastructure\Persistence\DoctrineWorklogRepository;
 use RA\OroCrmTimeLapBundle\Model\Period;

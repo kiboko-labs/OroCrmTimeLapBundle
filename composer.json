@@ -10,14 +10,14 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "RA\\OroCrmTimeLapBundle": "."
+        "psr-4": {
+            "RA\\OroCrmTimeLapBundle\\": "."
         }
     },
     "target-dir": "RA/OroCrmTimeLapBundle",
     "require": {
-        "php": ">=7.0",
-        "oro/crm": "^2.0"
+        "php": ">=7.1",
+        "oro/crm": "^2.3"
     },
     "require-dev": {
         "eltrino/phpunit-mockannotations": "*"

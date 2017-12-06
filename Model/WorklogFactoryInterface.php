@@ -3,7 +3,7 @@
 namespace RA\OroCrmTimeLapBundle\Model;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use OroCRM\Bundle\TaskBundle\Entity\Task;
+use Oro\Bundle\TaskBundle\Entity\Task;
 
 interface WorklogFactoryInterface
 {

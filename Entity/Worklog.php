@@ -42,9 +42,9 @@ class Worklog extends \RA\OroCrmTimeLapBundle\Model\Worklog
     protected $description;
 
     /**
-     * @var \OroCRM\Bundle\TaskBundle\Entity\Task
+     * @var \Oro\Bundle\TaskBundle\Entity\Task
      *
-     * @ORM\ManyToOne(targetEntity="\OroCRM\Bundle\TaskBundle\Entity\Task")
+     * @ORM\ManyToOne(targetEntity="\Oro\Bundle\TaskBundle\Entity\Task")
      * @ORM\JoinColumn(name="task_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $task;
